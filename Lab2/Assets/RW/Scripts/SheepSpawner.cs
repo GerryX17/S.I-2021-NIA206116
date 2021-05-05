@@ -2,34 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+using TMPro;
 public class SheepSpawner : MonoBehaviour
 {
-    private int count;
+    public int count;
     public bool canSpawn = true; // 1
     public GameObject sheepPrefab; // 2
     public List<Transform> sheepSpawnPositions = new List<Transform>(); // 3
     public float timeBetweenSpawns;
     private List<GameObject> sheepList = new List<GameObject>(); // 5
 
-    /*public TextMeshProUGUI countText;
+    public TextMeshProUGUI countText;
     public GameObject winTextObject;
     public GameObject loseTextObject;
-    public GameObject restartButton;*/
+    public GameObject restartButton;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(SpawnRoutine());
-        //endgame();
-        //restartButton.gameObject.SetActive(false);
-        //winTextObject.SetActive(false);
-        //loseTextObject.SetActive(false);
+        count = 0;
+        countText.text = "Count: " + count.ToString();
+        restartButton.gameObject.SetActive(false);
+        winTextObject.SetActive(false);
+        loseTextObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //print(count);
-        //countText.text = "Count: " + count.ToString();
+        endgame();
     }
 
     private void SpawnSheep()
@@ -48,12 +50,27 @@ public class SheepSpawner : MonoBehaviour
         }
     }
 
-    public void RemoveSheepFromList(GameObject sheep)
-    {
-        //count = count + sheep.GetComponent<Sheep>().count;
-        sheepList.Remove(sheep);
+    public void RemoveSheepFromList(GameObject sheep, bool hit)
+    {  
+
+        if(hit == true)
+        {
+
+            sheepList.Remove(sheep);
+            count++;
+            countText.text = "Count: " + count.ToString();
+            endgame();
+        }
+        else
+        {
+            restartButton.gameObject.SetActive(true);
+            loseTextObject.SetActive(true);
+            sheepList.Remove(sheep);
+        }
     }
-    /*void endgame()
+
+
+    void endgame()
     {
         if (count >= 10)
         {
@@ -64,7 +81,7 @@ public class SheepSpawner : MonoBehaviour
             winTextObject.SetActive(true);
 
         }
-    }*/
+    }
 
 
 }
