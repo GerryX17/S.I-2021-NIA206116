@@ -64,12 +64,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\RW\Scripts\ChangeColorOnMouseOver.cs" />
     <Compile Include="Assets\RW\Scripts\DestroyOnTrigger.cs" />
+    <Compile Include="Assets\RW\Scripts\DestroyTimer.cs" />
     <Compile Include="Assets\RW\Scripts\HayMachineControl.cs" />
     <Compile Include="Assets\RW\Scripts\HayMove.cs" />
+    <Compile Include="Assets\RW\Scripts\Managers\GameStateManager.cs" />
+    <Compile Include="Assets\RW\Scripts\Managers\SoundManager.cs" />
+    <Compile Include="Assets\RW\Scripts\Managers\UIManager.cs" />
+    <Compile Include="Assets\RW\Scripts\QuitButton.cs" />
     <Compile Include="Assets\RW\Scripts\Reset.cs" />
+    <Compile Include="Assets\RW\Scripts\Shared\GameSettings.cs" />
+    <Compile Include="Assets\RW\Scripts\Shared\HayMachineColor.cs" />
+    <Compile Include="Assets\RW\Scripts\Shared\HayMachineSwitcher.cs" />
     <Compile Include="Assets\RW\Scripts\Sheep.cs" />
     <Compile Include="Assets\RW\Scripts\SheepSpawner.cs" />
+    <Compile Include="Assets\RW\Scripts\StartButton.cs" />
+    <Compile Include="Assets\RW\Scripts\TweenScale.cs" />
     <Compile Include="Assets\RW\Scripts\rotate.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />

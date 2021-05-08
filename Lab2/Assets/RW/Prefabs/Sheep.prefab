@@ -78,15 +78,9 @@ MonoBehaviour:
   runSpeed: 10
   gotHayDestroyDelay: 1
   dropDestroyDelay: 4
-  countText: {fileID: 495097661543360777, guid: ec8698eaccae1f64b90a07eccd49f122,
+  heartOffset: 4
+  heartPrefab: {fileID: 5155772939476715655, guid: 790e52bfc7211a04497ede8219bc564e,
     type: 3}
-  winTextObject: {fileID: 9130785882093795715, guid: 4099a5d6606f02943bdccd01a1d7a920,
-    type: 3}
-  loseTextObject: {fileID: 7886831291446659622, guid: 25340b4126ec1284dbb2018a783e3971,
-    type: 3}
-  restartButton: {fileID: 3293675062989082383, guid: 124aecbb649de2d49acc973f75eee235,
-    type: 3}
-  count: 0
 --- !u!1001 &1975218964598612651
 PrefabInstance:
   m_ObjectHideFlags: 0

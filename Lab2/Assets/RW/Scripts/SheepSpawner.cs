@@ -13,19 +13,19 @@ public class SheepSpawner : MonoBehaviour
     public float timeBetweenSpawns;
     private List<GameObject> sheepList = new List<GameObject>(); // 5
 
-    public TextMeshProUGUI countText;
+    //public TextMeshProUGUI countText;
     public GameObject winTextObject;
-    public GameObject loseTextObject;
+    //public GameObject loseTextObject;
     public GameObject restartButton;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(SpawnRoutine());
         count = 0;
-        countText.text = "Count: " + count.ToString();
+        //countText.text = "Count: " + count.ToString();
         restartButton.gameObject.SetActive(false);
         winTextObject.SetActive(false);
-        loseTextObject.SetActive(false);
+        //loseTextObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -49,6 +49,10 @@ public class SheepSpawner : MonoBehaviour
             yield return new WaitForSeconds(timeBetweenSpawns); // 4
         }
     }
+    public void DestroyAllSheep()
+    {
+        sheepList.Clear();
+    }
 
     public void RemoveSheepFromList(GameObject sheep, bool hit)
     {  
@@ -58,13 +62,13 @@ public class SheepSpawner : MonoBehaviour
 
             sheepList.Remove(sheep);
             count++;
-            countText.text = "Count: " + count.ToString();
+            //countText.text = "Count: " + count.ToString();
             endgame();
         }
         else
         {
-            restartButton.gameObject.SetActive(true);
-            loseTextObject.SetActive(true);
+            //restartButton.gameObject.SetActive(true);
+            //loseTextObject.SetActive(true);
             sheepList.Remove(sheep);
         }
     }
@@ -75,7 +79,7 @@ public class SheepSpawner : MonoBehaviour
         if (count >= 10)
         {
             restartButton.gameObject.SetActive(true);
-            loseTextObject.SetActive(false);
+            //loseTextObject.SetActive(false);
 
             // Set the text value of your 'winText'
             winTextObject.SetActive(true);
