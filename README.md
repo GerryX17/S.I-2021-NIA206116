@@ -9,5 +9,5 @@
 ### Objective: Shoot to 10 sheeps to win, lose if 3 are not shooted. 
 
 ## Lab5: ExternalSensors
-![ScreenShot](prueba lab5.jpg)
+![ScreenShot](https://github.com/GerryX17/S.I-2021-NIA206116/blob/master/prueba%20lab5.jpg)
 
