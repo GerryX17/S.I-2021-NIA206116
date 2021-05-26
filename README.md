@@ -7,3 +7,7 @@
 ## Lab2: HayMachine
 ### Description: Hit hay to sheeps with space, to control machine use <- ->.
 ### Objective: Shoot to 10 sheeps to win, lose if 3 are not shooted. 
+
+## Lab5: ExternalSensors
+![ScreenShot](prueba lab5.jpg)
+
